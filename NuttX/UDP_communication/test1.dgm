@@ -1,0 +1,64 @@
+<root>
+  <pysimCoder>
+    <pysimCoderVersion>0.9</pysimCoderVersion>
+  </pysimCoder>
+  <Date>
+    <SavingDate>16.09.2021 - 13:14:42</SavingDate>
+  </Date>
+  <Simulation>
+    <Template>nuttx.tmf</Template>
+    <Ts>0.01</Ts>
+    <AddObj></AddObj>
+    <ParScript></ParScript>
+    <Tf>10</Tf>
+  </Simulation>
+  <block>
+    <name>Sine_wave</name>
+    <inp>0</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>SINUS</icon>
+    <params>sineBlk|Amplitude: 1|Freq [Hz]: 1|Phase: 0|Bias: 0|Delay: 0</params>
+    <help>This block implements a Sinus input signal
+
+Parameters:
+Amplitude
+Frequency (Hz)
+Phase
+Bias
+Delay
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-380.0</posX>
+    <posY>0.0</posY>
+  </block>
+  <block>
+    <name>UDPsocketTx</name>
+    <inp>1</inp>
+    <outp>0</outp>
+    <inset>1</inset>
+    <outset>0</outset>
+    <icon>UDPSOCK</icon>
+    <params>UDPsocketTxBlk|IP Addr: '192.168.178.109'| Port: 5000</params>
+    <help>This Block implements a UDP sender
+
+Parameters
+IP address of the receiver
+Port
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-170.0</posX>
+    <posY>-10.0</posY>
+  </block>
+  <connection>
+    <pos1X>-340.0</pos1X>
+    <pos1Y>0.0</pos1Y>
+    <pos2X>-210.0</pos2X>
+    <pos2Y>-10.0</pos2Y>
+    <pt>-270.0,0.0</pt>
+    <pt>-270.0,-10.0</pt>
+  </connection>
+</root>
