@@ -1,3 +1,3 @@
 # pysimCoder-examples
 
-This git should contains examples provided by user for different targets
+This git should contains examples provided by users for different targets
