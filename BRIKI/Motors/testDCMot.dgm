@@ -1,0 +1,46 @@
+<root>
+  <Date>
+    <SavingDate>21.01.2020 - 07:01:37</SavingDate>
+  </Date>
+  <Simulation>
+    <Template>samd21.tmf</Template>
+    <Ts>0.01</Ts>
+    <AddObj></AddObj>
+    <ParScript></ParScript>
+    <Tf>10.0</Tf>
+  </Simulation>
+  <block>
+    <name>brikiDCMot</name>
+    <inp>1</inp>
+    <outp>0</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>MOT_V</icon>
+    <params>brikiDCMotBlk|Enable Pin: 11|In1 Pin: 13|In2 Pin: 23</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-140.0</posX>
+    <posY>-60.0</posY>
+  </block>
+  <block>
+    <name>Sine_wave</name>
+    <inp>0</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>SINUS</icon>
+    <params>sineBlk|Amplitude: 1|Freq: 0.4|Phase: 0|Bias: 0|Delay: 0</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-350.0</posX>
+    <posY>-60.0</posY>
+  </block>
+  <connection>
+    <pos1X>-310.0</pos1X>
+    <pos1Y>-60.0</pos1Y>
+    <pos2X>-180.0</pos2X>
+    <pos2Y>-60.0</pos2Y>
+    <pt>-240.0,-60.0</pt>
+    <pt>-240.0,-60.0</pt>
+  </connection>
+</root>

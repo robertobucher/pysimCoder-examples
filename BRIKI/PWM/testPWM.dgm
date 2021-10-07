@@ -1,0 +1,49 @@
+<root>
+  <pysimCoder>
+    <pysimCoderVersion>0.9</pysimCoderVersion>
+  </pysimCoder>
+  <Date>
+    <SavingDate>10.11.2020 - 15:33:10</SavingDate>
+  </Date>
+  <Simulation>
+    <Template>samd21.tmf</Template>
+    <Ts>0.01</Ts>
+    <AddObj></AddObj>
+    <ParScript></ParScript>
+    <Tf>10.0</Tf>
+  </Simulation>
+  <block>
+    <name>PWM</name>
+    <inp>1</inp>
+    <outp>0</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>PWM</icon>
+    <params>brikiPWMBlk|Pin: 13|Umin [V]: 0|Umax [V]: 1</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-250.0</posX>
+    <posY>-100.0</posY>
+  </block>
+  <block>
+    <name>Step</name>
+    <inp>0</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>STEP</icon>
+    <params>stepBlk|Step Time: 1|Initial Value: 0|Final Value: 1</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-490.0</posX>
+    <posY>-100.0</posY>
+  </block>
+  <connection>
+    <pos1X>-450.0</pos1X>
+    <pos1Y>-100.0</pos1Y>
+    <pos2X>-290.0</pos2X>
+    <pos2Y>-100.0</pos2Y>
+    <pt>-370.0,-100.0</pt>
+    <pt>-370.0,-100.0</pt>
+  </connection>
+</root>

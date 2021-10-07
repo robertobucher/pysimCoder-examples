@@ -1,0 +1,46 @@
+<root>
+  <Date>
+    <SavingDate>21.01.2020 - 06:59:45</SavingDate>
+  </Date>
+  <Simulation>
+    <Template>samd21.tmf</Template>
+    <Ts>0.01</Ts>
+    <AddObj></AddObj>
+    <ParScript></ParScript>
+    <Tf>10.0</Tf>
+  </Simulation>
+  <block>
+    <name>Sine_wave</name>
+    <inp>0</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>SINUS</icon>
+    <params>sineBlk|Amplitude: 1|Freq: 0.4|Phase: 0|Bias: 0|Delay: 0</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-400.0</posX>
+    <posY>-70.0</posY>
+  </block>
+  <block>
+    <name>AnalogOut</name>
+    <inp>1</inp>
+    <outp>0</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>DA</icon>
+    <params>brikiAOBlk|Pin: 26|Umin [V]: -1|Umax [V]: 1</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-170.0</posX>
+    <posY>-70.0</posY>
+  </block>
+  <connection>
+    <pos1X>-360.0</pos1X>
+    <pos1Y>-70.0</pos1Y>
+    <pos2X>-210.0</pos2X>
+    <pos2Y>-70.0</pos2Y>
+    <pt>-300.0,-70.0</pt>
+    <pt>-300.0,-70.0</pt>
+  </connection>
+</root>

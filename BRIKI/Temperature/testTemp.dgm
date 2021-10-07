@@ -1,0 +1,46 @@
+<root>
+  <Date>
+    <SavingDate>02.12.2019 - 09:38:44</SavingDate>
+  </Date>
+  <Simulation>
+    <Template>samd21.tmf</Template>
+    <Ts>0.01</Ts>
+    <AddObj></AddObj>
+    <ParScript></ParScript>
+    <Tf>10</Tf>
+  </Simulation>
+  <block>
+    <name>serialOut</name>
+    <inp>1</inp>
+    <outp>0</outp>
+    <inset>1</inset>
+    <outset>0</outset>
+    <icon>SERIAL</icon>
+    <params>brikiSerialOutBlk|Decimation:1</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-180.0</posX>
+    <posY>-120.0</posY>
+  </block>
+  <block>
+    <name>IMUTemp</name>
+    <inp>0</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>IMU</icon>
+    <params>ImuTempBlk</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-450.0</posX>
+    <posY>-120.0</posY>
+  </block>
+  <connection>
+    <pos1X>-410.0</pos1X>
+    <pos1Y>-120.0</pos1Y>
+    <pos2X>-220.0</pos2X>
+    <pos2Y>-120.0</pos2Y>
+    <pt>-310.0,-120.0</pt>
+    <pt>-310.0,-120.0</pt>
+  </connection>
+</root>

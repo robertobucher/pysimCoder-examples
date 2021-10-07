@@ -1,0 +1,49 @@
+<root>
+  <pysimCoder>
+    <pysimCoderVersion>0.9</pysimCoderVersion>
+  </pysimCoder>
+  <Date>
+    <SavingDate>29.10.2020 - 19:49:21</SavingDate>
+  </Date>
+  <Simulation>
+    <Template>samd21.tmf</Template>
+    <Ts>0.01</Ts>
+    <AddObj></AddObj>
+    <ParScript></ParScript>
+    <Tf>10</Tf>
+  </Simulation>
+  <block>
+    <name>serialOut</name>
+    <inp>1</inp>
+    <outp>0</outp>
+    <inset>1</inset>
+    <outset>0</outset>
+    <icon>SERIAL</icon>
+    <params>brikiSerialOutBlk|Decimation:1</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-230.0</posX>
+    <posY>-20.0</posY>
+  </block>
+  <block>
+    <name>Sine_wave</name>
+    <inp>0</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>SINUS</icon>
+    <params>sineBlk|Amplitude: 1|Freq: 1|Phase: 0|Bias: 0|Delay: 0</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-450.0</posX>
+    <posY>-20.0</posY>
+  </block>
+  <connection>
+    <pos1X>-410.0</pos1X>
+    <pos1Y>-20.0</pos1Y>
+    <pos2X>-270.0</pos2X>
+    <pos2Y>-20.0</pos2Y>
+    <pt>-340.0,-20.0</pt>
+    <pt>-340.0,-20.0</pt>
+  </connection>
+</root>

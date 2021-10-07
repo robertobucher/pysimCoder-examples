@@ -1,0 +1,46 @@
+<root>
+  <Date>
+    <SavingDate>21.01.2020 - 06:57:23</SavingDate>
+  </Date>
+  <Simulation>
+    <Template>samd21.tmf</Template>
+    <Ts>0.01</Ts>
+    <AddObj></AddObj>
+    <ParScript></ParScript>
+    <Tf>10.0</Tf>
+  </Simulation>
+  <block>
+    <name>AnalogIn</name>
+    <inp>0</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>AD</icon>
+    <params>brikiAIBlk|Input: 27|Umin [V]: 0.0|Umax [V]: 3.3</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-450.0</posX>
+    <posY>-150.0</posY>
+  </block>
+  <block>
+    <name>serialOut</name>
+    <inp>1</inp>
+    <outp>0</outp>
+    <inset>1</inset>
+    <outset>0</outset>
+    <icon>SERIAL</icon>
+    <params>brikiSerialOutBlk|Decimation:1</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-200.0</posX>
+    <posY>-150.0</posY>
+  </block>
+  <connection>
+    <pos1X>-410.0</pos1X>
+    <pos1Y>-150.0</pos1Y>
+    <pos2X>-240.0</pos2X>
+    <pos2Y>-150.0</pos2Y>
+    <pt>-310.0,-150.0</pt>
+    <pt>-310.0,-150.0</pt>
+  </connection>
+</root>

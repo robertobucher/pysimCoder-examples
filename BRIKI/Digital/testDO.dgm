@@ -1,0 +1,46 @@
+<root>
+  <Date>
+    <SavingDate>03.12.2019 - 14:50:16</SavingDate>
+  </Date>
+  <Simulation>
+    <Template>samd21.tmf</Template>
+    <Ts>0.01</Ts>
+    <AddObj></AddObj>
+    <ParScript></ParScript>
+    <Tf>10</Tf>
+  </Simulation>
+  <block>
+    <name>DO</name>
+    <inp>1</inp>
+    <outp>0</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>DO</icon>
+    <params>brikiDOBlk|Channel: 11|Threshold: 0.5</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-50.0</posX>
+    <posY>-130.0</posY>
+  </block>
+  <block>
+    <name>PulseGenerator</name>
+    <inp>0</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>SQUARE</icon>
+    <params>squareBlk|Amplitude: 1|Period: 4|Width: 2|Bias: 0|Delay: 0</params>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-300.0</posX>
+    <posY>-130.0</posY>
+  </block>
+  <connection>
+    <pos1X>-260.0</pos1X>
+    <pos1Y>-130.0</pos1Y>
+    <pos2X>-90.0</pos2X>
+    <pos2Y>-130.0</pos2Y>
+    <pt>-170.0,-130.0</pt>
+    <pt>-170.0,-130.0</pt>
+  </connection>
+</root>
