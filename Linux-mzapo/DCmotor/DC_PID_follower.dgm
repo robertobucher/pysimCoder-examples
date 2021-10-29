@@ -1,0 +1,753 @@
+<root>
+  <pysimCoder>
+    <pysimCoderVersion>0.9</pysimCoderVersion>
+  </pysimCoder>
+  <Date>
+    <SavingDate>27.10.2021 - 18:46:29</SavingDate>
+  </Date>
+  <Simulation>
+    <Template>rt_mz_apo.tmf</Template>
+    <Ts>0.001</Ts>
+    <AddObj></AddObj>
+    <ParScript></ParScript>
+    <Tf>10</Tf>
+  </Simulation>
+  <block>
+    <name>Saturation2</name>
+    <inp>1</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>SATUR</icon>
+    <params>saturBlk|Upper saturation: 1|Lower saturation: 0</params>
+    <help>This block saturates the input signals to the two limits passed as parameters.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-340.0</posX>
+    <posY>360.0</posY>
+  </block>
+  <block>
+    <name>Saturation1</name>
+    <inp>1</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>SATUR</icon>
+    <params>saturBlk|Upper saturation: 1|Lower saturation: 0</params>
+    <help>This block saturates the input signals to the two limits passed as parameters.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-340.0</posX>
+    <posY>180.0</posY>
+  </block>
+  <block>
+    <name>Saturation0</name>
+    <inp>1</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>SATUR</icon>
+    <params>saturBlk|Upper saturation: 1|Lower saturation: 0</params>
+    <help>This block saturates the input signals to the two limits passed as parameters.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-340.0</posX>
+    <posY>50.0</posY>
+  </block>
+  <block>
+    <name>Gain1</name>
+    <inp>1</inp>
+    <outp>1</outp>
+    <inset>1</inset>
+    <outset>1</outset>
+    <icon>MULT</icon>
+    <params>matmultBlk|Gains: 0.00001</params>
+    <help>Implements the multiplication of the input with a matrix of coefficients.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-460.0</posX>
+    <posY>360.0</posY>
+  </block>
+  <block>
+    <name>Gain0</name>
+    <inp>1</inp>
+    <outp>1</outp>
+    <inset>1</inset>
+    <outset>1</outset>
+    <icon>MULT</icon>
+    <params>matmultBlk|Gains: 0.00001</params>
+    <help>Implements the multiplication of the input with a matrix of coefficients.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-450.0</posX>
+    <posY>180.0</posY>
+  </block>
+  <block>
+    <name>Delay</name>
+    <inp>1</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>DELAY</icon>
+    <params>zdelayBlk|Initial conditions: 0</params>
+    <help>This block implements a unit delay in discrete time domain.
+
+No parameters are required.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>170.0</posX>
+    <posY>160.0</posY>
+  </block>
+  <block>
+    <name>Sum</name>
+    <inp>3</inp>
+    <outp>1</outp>
+    <inset>1</inset>
+    <outset>0</outset>
+    <icon>SUM</icon>
+    <params>sumBlk|Gains: [1,1,1]</params>
+    <help>This block get the weighted sum of the input signals.
+
+It can have more than 2 inputs.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>310.0</posX>
+    <posY>160.0</posY>
+  </block>
+  <block>
+    <name>Prod</name>
+    <inp>2</inp>
+    <outp>1</outp>
+    <inset>1</inset>
+    <outset>1</outset>
+    <icon>PROD</icon>
+    <params>prodBlk</params>
+    <help>This block multiply the two input signals.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-110.0</posX>
+    <posY>30.0</posY>
+  </block>
+  <block>
+    <name>BLUE_D</name>
+    <inp>0</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>ENC</icon>
+    <params>mz_apo_ENCBlk|channel: 2|init_val: 0</params>
+    <help>Parameters
+Channel[0]: Encoder 1 (RED)
+Channel[1]: Encoder 2 (GREEN)
+Channel[2]: Encoder 3 (BLUE)
+Initial Value: any integer
+
+
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-570.0</posX>
+    <posY>360.0</posY>
+  </block>
+  <block>
+    <name>GREEN_I</name>
+    <inp>0</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>ENC</icon>
+    <params>mz_apo_ENCBlk|channel: 1|init_val: 0</params>
+    <help>Parameters
+Channel[0]: Encoder 1 (RED)
+Channel[1]: Encoder 2 (GREEN)
+Channel[2]: Encoder 3 (BLUE)
+Initial Value: any integer
+
+
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-560.0</posX>
+    <posY>180.0</posY>
+  </block>
+  <block>
+    <name>RED_P</name>
+    <inp>0</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>ENC</icon>
+    <params>mz_apo_ENCBlk|channel: 0|init_val: 1</params>
+    <help>Parameters
+Channel[0]: Encoder 1 (RED)
+Channel[1]: Encoder 2 (GREEN)
+Channel[2]: Encoder 3 (BLUE)
+Initial Value: any integer
+
+
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-560.0</posX>
+    <posY>50.0</posY>
+  </block>
+  <block>
+    <name>mzapoDCmot0</name>
+    <inp>1</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>MOT</icon>
+    <params>mz_apo_DCmotBlk|mot_ID: 0</params>
+    <help>Parameters
+Motor ID: 0 or 1
+
+
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-430.0</posX>
+    <posY>-180.0</posY>
+  </block>
+  <block>
+    <name>mzapoDCmot1</name>
+    <inp>1</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>MOT</icon>
+    <params>mz_apo_DCmotBlk|mot_ID: 1</params>
+    <help>Parameters
+Motor ID: 0 or 1
+
+
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>550.0</posX>
+    <posY>160.0</posY>
+  </block>
+  <block>
+    <name>Const</name>
+    <inp>0</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>CONST</icon>
+    <params>constBlk|Value: 0</params>
+    <help>This block implements a constant input signal.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-570.0</posX>
+    <posY>-180.0</posY>
+  </block>
+  <block>
+    <name>Sub</name>
+    <inp>2</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>PM</icon>
+    <params>sumBlk|Gains: [1,-1]</params>
+    <help>This block get the weighted sum of the input signals.
+
+It can have more than 2 inputs.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-230.0</posX>
+    <posY>-70.0</posY>
+  </block>
+  <block>
+    <name>Prod0</name>
+    <inp>2</inp>
+    <outp>1</outp>
+    <inset>1</inset>
+    <outset>1</outset>
+    <icon>PROD</icon>
+    <params>prodBlk</params>
+    <help>This block multiply the two input signals.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-110.0</posX>
+    <posY>160.0</posY>
+  </block>
+  <block>
+    <name>Sum0</name>
+    <inp>3</inp>
+    <outp>1</outp>
+    <inset>1</inset>
+    <outset>0</outset>
+    <icon>SUM</icon>
+    <params>sumBlk|Gains: [1,1,1]</params>
+    <help>This block get the weighted sum of the input signals.
+
+It can have more than 2 inputs.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>30.0</posX>
+    <posY>160.0</posY>
+  </block>
+  <block>
+    <name>Saturation</name>
+    <inp>1</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>SATUR</icon>
+    <params>saturBlk|Upper saturation: 1|Lower saturation: -1</params>
+    <help>This block saturates the input signals to the two limits passed as parameters.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>430.0</posX>
+    <posY>160.0</posY>
+  </block>
+  <block>
+    <name>Sub0</name>
+    <inp>2</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>PM</icon>
+    <params>sumBlk|Gains: [1,-1]</params>
+    <help>This block get the weighted sum of the input signals.
+
+It can have more than 2 inputs.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>550.0</posX>
+    <posY>360.0</posY>
+  </block>
+  <block>
+    <name>Sub1</name>
+    <inp>2</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>PM</icon>
+    <params>sumBlk|Gains: [1,-1]</params>
+    <help>This block get the weighted sum of the input signals.
+
+It can have more than 2 inputs.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>40.0</posX>
+    <posY>310.0</posY>
+  </block>
+  <block>
+    <name>Delay0</name>
+    <inp>1</inp>
+    <outp>1</outp>
+    <inset>0</inset>
+    <outset>0</outset>
+    <icon>DELAY</icon>
+    <params>zdelayBlk|Initial conditions: 0</params>
+    <help>This block implements a unit delay in discrete time domain.
+
+No parameters are required.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-100.0</posX>
+    <posY>330.0</posY>
+  </block>
+  <block>
+    <name>Prod1</name>
+    <inp>2</inp>
+    <outp>1</outp>
+    <inset>1</inset>
+    <outset>1</outset>
+    <icon>PROD</icon>
+    <params>prodBlk</params>
+    <help>This block multiply the two input signals.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>190.0</posX>
+    <posY>330.0</posY>
+  </block>
+  <block>
+    <name>Gain</name>
+    <inp>1</inp>
+    <outp>1</outp>
+    <inset>1</inset>
+    <outset>1</outset>
+    <icon>MULT</icon>
+    <params>matmultBlk|Gains: 0.0001</params>
+    <help>Implements the multiplication of the input with a matrix of coefficients.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-450.0</posX>
+    <posY>50.0</posY>
+  </block>
+  <block>
+    <name>TCP_5000</name>
+    <inp>3</inp>
+    <outp>0</outp>
+    <inset>1</inset>
+    <outset>0</outset>
+    <icon>TCPSOCKET</icon>
+    <params>TCPsocketTxBlk|IP Addr: '$HOST'|Port: 5000</params>
+    <help>This block implements a TCP sender
+
+Parameters
+IP address of the receiver
+Port
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>720.0</posX>
+    <posY>160.0</posY>
+  </block>
+  <block>
+    <name>Gain2</name>
+    <inp>1</inp>
+    <outp>1</outp>
+    <inset>1</inset>
+    <outset>1</outset>
+    <icon>MULT</icon>
+    <params>matmultBlk|Gains: 100</params>
+    <help>Implements the multiplication of the input with a matrix of coefficients.
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>550.0</posX>
+    <posY>250.0</posY>
+  </block>
+  <block>
+    <name>UDP_5000</name>
+    <inp>3</inp>
+    <outp>0</outp>
+    <inset>1</inset>
+    <outset>0</outset>
+    <icon>UDPSOCK</icon>
+    <params>UDPsocketTxBlk|IP Addr: '$HOST'| Port: 5000</params>
+    <help>This Block implements a UDP sender
+
+Parameters
+IP address of the receiver
+Port
+</help>
+    <width>80</width>
+    <flip>0</flip>
+    <posX>-220.0</posX>
+    <posY>260.0</posY>
+  </block>
+  <connection>
+    <pos1X>-300.0</pos1X>
+    <pos1Y>360.0</pos1Y>
+    <pos2X>-260.0</pos2X>
+    <pos2Y>300.0</pos2Y>
+    <pt>-280.0,360.0</pt>
+    <pt>-280.0,300.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-300.0</pos1X>
+    <pos1Y>180.0</pos1Y>
+    <pos2X>-260.0</pos2X>
+    <pos2Y>260.0</pos2Y>
+    <pt>-270.0,180.0</pt>
+    <pt>-270.0,260.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-300.0</pos1X>
+    <pos1Y>50.0</pos1Y>
+    <pos2X>-260.0</pos2X>
+    <pos2Y>220.0</pos2Y>
+    <pt>-280.0,50.0</pt>
+    <pt>-280.0,220.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-420.0</pos1X>
+    <pos1Y>360.0</pos1Y>
+    <pos2X>-380.0</pos2X>
+    <pos2Y>360.0</pos2Y>
+    <pt>-400.0,360.0</pt>
+    <pt>-400.0,360.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-300.0</pos1X>
+    <pos1Y>180.0</pos1Y>
+    <pos2X>-150.0</pos2X>
+    <pos2Y>180.0</pos2Y>
+    <pt>-220.0,180.0</pt>
+    <pt>-220.0,180.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-410.0</pos1X>
+    <pos1Y>180.0</pos1Y>
+    <pos2X>-380.0</pos2X>
+    <pos2Y>180.0</pos2Y>
+    <pt>-390.0,180.0</pt>
+    <pt>-390.0,180.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-300.0</pos1X>
+    <pos1Y>50.0</pos1Y>
+    <pos2X>-150.0</pos2X>
+    <pos2Y>50.0</pos2Y>
+    <pt>-220.0,50.0</pt>
+    <pt>-220.0,50.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-410.0</pos1X>
+    <pos1Y>50.0</pos1Y>
+    <pos2X>-380.0</pos2X>
+    <pos2Y>50.0</pos2Y>
+    <pt>-390.0,50.0</pt>
+    <pt>-390.0,50.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-520.0</pos1X>
+    <pos1Y>50.0</pos1Y>
+    <pos2X>-490.0</pos2X>
+    <pos2Y>50.0</pos2Y>
+    <pt>-500.0,50.0</pt>
+    <pt>-500.0,50.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-530.0</pos1X>
+    <pos1Y>360.0</pos1Y>
+    <pos2X>-500.0</pos2X>
+    <pos2Y>360.0</pos2Y>
+    <pt>-510.0,360.0</pt>
+    <pt>-510.0,360.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-520.0</pos1X>
+    <pos1Y>180.0</pos1Y>
+    <pos2X>-490.0</pos2X>
+    <pos2Y>180.0</pos2Y>
+    <pt>-500.0,180.0</pt>
+    <pt>-500.0,180.0</pt>
+  </connection>
+  <connection>
+    <pos1X>590.0</pos1X>
+    <pos1Y>160.0</pos1Y>
+    <pos2X>-270.0</pos2X>
+    <pos2Y>-50.0</pos2Y>
+    <pt>630.0,160.0</pt>
+    <pt>630.0,460.0</pt>
+    <pt>-290.0,460.0</pt>
+    <pt>-290.0,-50.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-70.0</pos1X>
+    <pos1Y>30.0</pos1Y>
+    <pos2X>270.0</pos2X>
+    <pos2Y>120.0</pos2Y>
+    <pt>250.0,30.0</pt>
+    <pt>250.0,120.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-190.0</pos1X>
+    <pos1Y>-70.0</pos1Y>
+    <pos2X>-150.0</pos2X>
+    <pos2Y>10.0</pos2Y>
+    <pt>-170.0,-70.0</pt>
+    <pt>-170.0,10.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-530.0</pos1X>
+    <pos1Y>-180.0</pos1Y>
+    <pos2X>-470.0</pos2X>
+    <pos2Y>-180.0</pos2Y>
+    <pt>-470.0,-180.0</pt>
+    <pt>-470.0,-180.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-390.0</pos1X>
+    <pos1Y>-180.0</pos1Y>
+    <pos2X>-270.0</pos2X>
+    <pos2Y>-90.0</pos2Y>
+    <pt>-330.0,-180.0</pt>
+    <pt>-330.0,-90.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-190.0</pos1X>
+    <pos1Y>-70.0</pos1Y>
+    <pos2X>-150.0</pos2X>
+    <pos2Y>140.0</pos2Y>
+    <pt>-170.0,-70.0</pt>
+    <pt>-170.0,140.0</pt>
+  </connection>
+  <connection>
+    <pos1X>210.0</pos1X>
+    <pos1Y>160.0</pos1Y>
+    <pos2X>270.0</pos2X>
+    <pos2Y>160.0</pos2Y>
+    <pt>240.0,160.0</pt>
+    <pt>240.0,160.0</pt>
+  </connection>
+  <connection>
+    <pos1X>70.0</pos1X>
+    <pos1Y>160.0</pos1Y>
+    <pos2X>130.0</pos2X>
+    <pos2Y>160.0</pos2Y>
+    <pt>100.0,160.0</pt>
+    <pt>100.0,160.0</pt>
+  </connection>
+  <connection>
+    <pos1X>210.0</pos1X>
+    <pos1Y>160.0</pos1Y>
+    <pos2X>-10.0</pos2X>
+    <pos2Y>120.0</pos2Y>
+    <pt>240.0,160.0</pt>
+    <pt>240.0,100.0</pt>
+    <pt>240.0,70.0</pt>
+    <pt>-30.0,70.0</pt>
+    <pt>-30.0,120.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-70.0</pos1X>
+    <pos1Y>160.0</pos1Y>
+    <pos2X>-10.0</pos2X>
+    <pos2Y>160.0</pos2Y>
+    <pt>-40.0,160.0</pt>
+    <pt>-40.0,160.0</pt>
+  </connection>
+  <connection>
+    <pos1X>350.0</pos1X>
+    <pos1Y>160.0</pos1Y>
+    <pos2X>390.0</pos2X>
+    <pos2Y>160.0</pos2Y>
+    <pt>370.0,160.0</pt>
+    <pt>370.0,160.0</pt>
+  </connection>
+  <connection>
+    <pos1X>470.0</pos1X>
+    <pos1Y>160.0</pos1Y>
+    <pos2X>510.0</pos2X>
+    <pos2Y>160.0</pos2Y>
+    <pt>490.0,160.0</pt>
+    <pt>490.0,160.0</pt>
+  </connection>
+  <connection>
+    <pos1X>350.0</pos1X>
+    <pos1Y>160.0</pos1Y>
+    <pos2X>510.0</pos2X>
+    <pos2Y>380.0</pos2Y>
+    <pt>370.0,160.0</pt>
+    <pt>370.0,380.0</pt>
+  </connection>
+  <connection>
+    <pos1X>470.0</pos1X>
+    <pos1Y>160.0</pos1Y>
+    <pos2X>510.0</pos2X>
+    <pos2Y>340.0</pos2Y>
+    <pt>490.0,160.0</pt>
+    <pt>490.0,340.0</pt>
+  </connection>
+  <connection>
+    <pos1X>590.0</pos1X>
+    <pos1Y>360.0</pos1Y>
+    <pos2X>-10.0</pos2X>
+    <pos2Y>200.0</pos2Y>
+    <pt>610.0,360.0</pt>
+    <pt>610.0,440.0</pt>
+    <pt>-40.0,440.0</pt>
+    <pt>-40.0,320.0</pt>
+    <pt>-40.0,200.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-190.0</pos1X>
+    <pos1Y>-70.0</pos1Y>
+    <pos2X>-140.0</pos2X>
+    <pos2Y>330.0</pos2Y>
+    <pt>-170.0,-70.0</pt>
+    <pt>-170.0,330.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-60.0</pos1X>
+    <pos1Y>330.0</pos1Y>
+    <pos2X>0.0</pos2X>
+    <pos2Y>330.0</pos2Y>
+    <pt>-30.0,330.0</pt>
+    <pt>-30.0,330.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-190.0</pos1X>
+    <pos1Y>-70.0</pos1Y>
+    <pos2X>0.0</pos2X>
+    <pos2Y>290.0</pos2Y>
+    <pt>-170.0,-70.0</pt>
+    <pt>-170.0,290.0</pt>
+  </connection>
+  <connection>
+    <pos1X>80.0</pos1X>
+    <pos1Y>310.0</pos1Y>
+    <pos2X>150.0</pos2X>
+    <pos2Y>310.0</pos2Y>
+    <pt>110.0,310.0</pt>
+    <pt>110.0,310.0</pt>
+  </connection>
+  <connection>
+    <pos1X>230.0</pos1X>
+    <pos1Y>330.0</pos1Y>
+    <pos2X>270.0</pos2X>
+    <pos2Y>200.0</pos2Y>
+    <pt>250.0,330.0</pt>
+    <pt>250.0,200.0</pt>
+  </connection>
+  <connection>
+    <pos1X>590.0</pos1X>
+    <pos1Y>160.0</pos1Y>
+    <pos2X>680.0</pos2X>
+    <pos2Y>160.0</pos2Y>
+    <pt>630.0,160.0</pt>
+    <pt>630.0,160.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-390.0</pos1X>
+    <pos1Y>-180.0</pos1Y>
+    <pos2X>680.0</pos2X>
+    <pos2Y>120.0</pos2Y>
+    <pt>-170.0,-180.0</pt>
+    <pt>420.0,-180.0</pt>
+    <pt>600.0,-180.0</pt>
+    <pt>600.0,120.0</pt>
+  </connection>
+  <connection>
+    <pos1X>470.0</pos1X>
+    <pos1Y>160.0</pos1Y>
+    <pos2X>510.0</pos2X>
+    <pos2Y>250.0</pos2Y>
+    <pt>490.0,160.0</pt>
+    <pt>490.0,250.0</pt>
+  </connection>
+  <connection>
+    <pos1X>590.0</pos1X>
+    <pos1Y>250.0</pos1Y>
+    <pos2X>680.0</pos2X>
+    <pos2Y>200.0</pos2Y>
+    <pt>650.0,250.0</pt>
+    <pt>650.0,200.0</pt>
+  </connection>
+  <connection>
+    <pos1X>-300.0</pos1X>
+    <pos1Y>360.0</pos1Y>
+    <pos2X>150.0</pos2X>
+    <pos2Y>350.0</pos2Y>
+    <pt>-210.0,360.0</pt>
+    <pt>-210.0,450.0</pt>
+    <pt>120.0,450.0</pt>
+    <pt>120.0,390.0</pt>
+    <pt>120.0,390.0</pt>
+    <pt>120.0,350.0</pt>
+  </connection>
+</root>
