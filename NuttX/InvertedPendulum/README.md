@@ -5,3 +5,4 @@
 - swing up
 - control of the unstable equilibrium point
 
+Film with the demo at https://www.youtube.com/watch?v=iX_hfb6ZoR4
