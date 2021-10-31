@@ -1,0 +1,6 @@
+# System with 2 rotating motors and a last, with a spring between the two lasts.
+
+The original system is based on Maxon motors.
+The communication between controller and motor driver is based on CAN bus.
+
+The FMU file have been designed in Openmodelica (DisksAndSpring.mo) and then translated into a FMU.
