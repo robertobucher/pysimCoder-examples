@@ -2,6 +2,12 @@
 
 This git should contains examples provided by users for different targets
 
+## Examples for TOS1A (successor of uDAQ28/LT)
+
+- https://www.eas.sk/mod/product/show.php?ID=16 (in Slovak language)
+
+![board](tos1a/img.png)
+
 ## Examples for Arduino Firmata
 
 ### Heatshield
